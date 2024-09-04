@@ -62,3 +62,10 @@
 
           updateCount();
         });
+
+
+        $('.arrows').click(function () {
+            $(".contact_info_sec").toggleClass("moveclass", 1000);  
+      });
+
+      

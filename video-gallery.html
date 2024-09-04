@@ -6,6 +6,7 @@
     <title>National Sickle Cell Anaemia Elimination Mission</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/fancybox.css">
     <meta name="description" content="Sicklecell Anemia" />
     <meta name="keywords" content="Sicklecell Anemia"/>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -99,12 +100,32 @@
 
         <section class="imageGallery">
             <div class="container">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="pageTitle">Video Gallery</div>
+              <div class="row card-deck">
+
+                <div class="col-md-6">
+                  <div class="card">
+                    <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <img class="card-img-top img-fluid" src="http://img.youtube.com/vi/_sI_Ps7JSEk/mqdefault.jpg" />
+                    </a>
+                    <div class="card-body">
+                      <p class="card-text">Complete Video To Show Mobile App Flow.</p>
+                    </div>
                   </div>
-                    
                 </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <a data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=2mDPgVWG_Y8">
+                      <img class="card-img-top img-fluid" src="http://img.youtube.com/vi/2mDPgVWG_Y8/mqdefault.jpg" />
+                    </a>
+                    <div class="card-body">
+                      <p class="card-text">Steps To Download LGD Data</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+              </div>
             </div>
         </section>
 
@@ -162,5 +183,13 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/fancybox.umd.js"></script>
+    <script>
+      $('.card-deck a').fancybox({
+        caption : function( instance, item ) {
+          return $(this).parent().find('.card-text').html();
+        }
+      });
+    </script>
   </body>
 </html>
