@@ -852,6 +852,7 @@ ul.appDownloadList li::after {
 .breadcrumb{
   display: flex;
   justify-content: center;
+  margin-bottom: 0;
 }
 .mainHeading .breadcrumb-item a{
   font-size: 2.0rem;
@@ -883,6 +884,7 @@ ul.appDownloadList li::after {
   height: 100%;
   background: var(--yellow);
   right: 0;
+  top:0;
 }
 .vision {
   position: relative;
@@ -895,6 +897,7 @@ ul.appDownloadList li::after {
 }
 .vision p{
   padding: 0 15px;
+  order: 1; 
 }
 .vision::after{
   position: absolute;
@@ -903,6 +906,7 @@ ul.appDownloadList li::after {
   height: 100%;
   background: var(--blue02);
   left: 0;
+  top:0;
 }
 
 ul.objectives{
@@ -1128,7 +1132,7 @@ ul.objectives li:nth-child(3)::before{
 .prevention li::after{
   position: absolute;
     content: '';
-    width: 3px;
+    width: 1px;
     height: 100%;
     background: var(--red);
     right: 0;
@@ -1137,7 +1141,7 @@ ul.objectives li:nth-child(3)::before{
 .prevention li::before{
     position: absolute;
     content: '';
-    width: 10px;
+    width: 5px;
     height: 100%;
     background: var(--red);
     left: 0;
@@ -1568,6 +1572,42 @@ table tr td {
       width: auto;
       height: 100%;
     }
+    .mission{
+      flex-direction: column;
+    }
+    .mission img{
+      max-height: 100px;
+    }
+    .mission p {
+      padding: 15px 15px 0;
+    }
+    .vision{
+      flex-direction: column;
+    }
+    .vision img{
+      max-height: 100px;
+    }
+    .vision p {
+      padding: 15px 15px 0;
+    }
+   
+    ul.objectives li {
+      font-size: 14px;
+    }
+    .mainHeading {
+      width: 100%;
+      height: 50px;     
+    }
+    .mainHeading .breadcrumb-item a {
+      font-size: 0.99rem;     
+    }
+    .mainHeading .breadcrumb-item.active {
+      font-size: 0.99rem;       
+    }
+    .pageTitle {    
+      font-size: 1.35rem;     
+      padding: 10px 0 20px;     
+    }
 }
 
 
@@ -1580,6 +1620,9 @@ table tr td {
     max-height: 46px;
     width: auto;
     height: 100%;
+  }
+  .mission{
+    flex-direction: column;
   }
 
  }
