@@ -463,7 +463,6 @@ ul.footerNavigation a {
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
-  /* 150% */
   letter-spacing: 3.2px;
   text-transform: capitalize;
   color: var(--lightGray);
@@ -1608,6 +1607,32 @@ table tr td {
       font-size: 1.35rem;     
       padding: 10px 0 20px;     
     }
+    .serviceBox {     
+      padding: 20px 15px;    
+      min-height: 249px;     
+    }
+    .headingUnderline {      
+      font-size:1.25rem;
+      padding: 5px 0;      
+      margin: 5px 0 15px;
+    }
+    .appDownload .title {     
+      font-size: 1.05rem;     
+      font-weight: 500;
+      line-height: 1.5;      
+      margin: 20px 0 30px;
+    }
+    ul.appDownloadList li {     
+      padding-left: 40px;
+      color: var(--black);
+      font-size: 1.005rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.5;
+      text-transform: capitalize;
+      margin-bottom: 15px;
+   }
+
 }
 
 
@@ -1624,6 +1649,31 @@ table tr td {
   .mission{
     flex-direction: column;
   }
+  .mainHeading {
+    width: 100%;
+    height: 90px;     
+  }
+  .mainHeading .breadcrumb-item a {
+    font-size: 1.05rem;        
+  }
+  .mainHeading .breadcrumb-item.active {
+    font-size: 1.05rem;      
+  }
+  .copyright p {    
+    font-size: 13px; 
+    line-height: 1.5;    
+    margin-bottom: 0;
+  }
+  ul.appDownloadList li {
+    padding-left: 40px;
+    color: var(--black);
+    font-size: 1.15rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
 
  }
 
@@ -1633,11 +1683,121 @@ table tr td {
   .headerLogo li img{
     max-height: 80px;
   }
+  .mainHeading {
+    width: 100%;
+    height: 90px;     
+  }
+  .mainHeading .breadcrumb-item a {
+    font-size: 1.05rem;        
+  }
+  .mainHeading .breadcrumb-item.active {
+    font-size: 1.05rem;      
+  }
 
  }
 
 
-@media (min-width: 992px) and (max-width: 1199.98px) {  }
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+
+  .navbar{
+    padding: 0;
+  }
+
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    /* color: var(--navColor); */
+    background:#ad121a;
+}
+  .navbar-nav li.active{
+    background:#ad121a;
+    color:#fff;
+  }	
+ 
+  .navbar-nav .nav-link{
+    color:#ffffff;
+    padding: 0.9rem 1.05rem!important;   
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    
+    min-width: calc(100% - 1px);
+}
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+    background: #022759;
+    color:#fff;
+    padding: 0;
+    border-radius: 0;
+  }
+  a.dropdown-item{
+    color:#fff;
+    padding: .65rem 1.5rem;
+    border-bottom:solid #615f5f 0.25px;
+  }
+  .dropdown-item:focus, .dropdown-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ad121a;
+  }
+  .dropdown-menu a.dropdown-item:last-child{
+    border-bottom:solid 0px;
+  } 
+  .navbar-nav li:first-child{
+    margin-left:0;
+  }
+  .digiindia{ height:70px;}
+  .dropdown .dropdown-menu {
+    transition: all 0.5s;
+    overflow: hidden;
+    transform-origin: top center;
+    transform: scale(1, 0);
+    display: block;
+    border:solid 0px;
+  }
+  .dropdown:hover .dropdown-menu {
+    transform: scale(1);
+  }
+
+  .dropdown-item.active, .dropdown-item:active {
+      color: var(--bs-dropdown-link-active-color);
+      text-decoration: none;
+      background-color: var(--navbarActive);
+  }
+
+  .nav-link:focus, .nav-link:hover {
+    background-color: var(--navbarActive);
+   }
+   .topheader .container{
+      max-width: 100%;			
+      padding-left:15px;
+      margin-right:auto;
+      margin-left:auto
+   }
+
+   li.nav-item::after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }    
+    .nav-link {
+      padding: 0 15px;
+    }
+    .mainHeading {
+      width: 100%;
+      height: 100px;     
+    }
+    .mainHeading .breadcrumb-item a {
+        font-size: 1.5rem;        
+    }
+    .mainHeading .breadcrumb-item.active {
+      font-size: 1.5rem;      
+    }
+
+}
 
 
 @media (min-width: 1200px) {
