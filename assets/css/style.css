@@ -1025,23 +1025,73 @@ ul.objectives li:nth-child(3)::before{
 .objectiveSection{
   background-color:var(--lightyellow02) ;
   width: 100%;
-  padding: 45px 25px 25px;
+  padding: 45px 25px 45px;
 
 }
-.objectiveSection > ul{
-  padding-left: 16px;
-}
+
+
 .objectiveSection p{
-    color: #323232;    
+    color: #101010;    
     font-size: 0.99rem;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.6px;
+    line-height: 1.5;    
     padding: 5px 15px;
 }
 
-.objectiveSection li{
+.objectiveSection > ul {
+  -webkit-padding-start: 1.5em;
+          padding-inline-start: 1.5em;
+  font-weight: 400;
+  padding-left: 16px;
+}
+.objectiveSection ul ::marker {
+  content: ">";
+  color: var(--red);
+}
+.objectiveSection > ul ul{
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.objectiveSection ul ul ::marker {
+  content: ">>";
+}
+
+.objectiveSection li {
+    position: relative;
+    -webkit-padding-start: 0.5em;
+    padding-inline-start: 0.5em;
+    padding-top: 0.65em;
+    cursor: default;
+    transition: color 0.4s;
+}
+.objectiveSection li li{
+  border-bottom: 1px solid #48b2;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+}
+
+/* .objectiveSection li:hover {
+  color: #48b;
+} */
+.objectiveSection li:hover::marker {
+  font-weight: 700;
+}
+.objectiveSection li:hover::after {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+.objectiveSection li strong{
+  color: var(--redDark);
+  font-weight: 500;
+}
+p.indent{
+  text-indent: 50px;
+  text-transform: capitalize;
+  color: var(--red);
+  font-size: 150%;
+}
+/* .objectiveSection li{
   color: #323232;
   font-family: Poppins;
   font-size: 16px;
@@ -1062,10 +1112,7 @@ ul.objectives li:nth-child(3)::before{
   left:0;
   background: #323232;;
 }
-.objectiveSection li strong{
-  color: var(--redDark);
-  font-weight: 500;
-}
+
 .objectiveSection li ul{
   width: 100%;
   margin-top: 15px;;
@@ -1092,7 +1139,7 @@ ul.objectives li:nth-child(3)::before{
   border-radius: 50%;
   top: 6px;
   left: 0;  
-}
+} */
 
 
 .beneficiaries{
@@ -1116,10 +1163,16 @@ ul.objectives li:nth-child(3)::before{
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.6px;
+  line-height: normal;  
 }
-
+.beneficiaries p:nth-child(2){
+  text-indent: 50px;
+}
+.beneficiaries p:nth-child(2)::first-letter {
+  font-size: 145%;
+  color: var(--red);
+  text-transform: capitalize;
+}
 .beneficiaries p strong{
   color:var(--redDark);
 }
@@ -1157,6 +1210,10 @@ ul.objectives li:nth-child(3)::before{
     height: 100%;
     background: var(--red);
     left: 0;
+}
+.prevention li span{
+  font-weight: 500;
+  color: var(--red);
 }
 .pageTitle{
   display: block;
@@ -1258,9 +1315,13 @@ ul.objectives li:nth-child(3)::before{
   margin-bottom: 35px;
 }
 .RoportLogin{
+  width: 100%;
   background-color: var(--lightyellow) ;
   padding: 55px 75px;
   border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: solid 1px var(--red);
 }
 
 
@@ -1635,7 +1696,7 @@ margin-bottom: 8px;
 /* Button styles */
 .mobile-otp button {
   width: 289px; height: 50px;
-  margin-top: 20px;
+  margin:20px auto 0;
   background-color: #007bff;
   color: #fff;
   border: none;   
@@ -1666,7 +1727,7 @@ margin-bottom: 8px;
   justify-content: space-between;
 }
 .inputCatcha .inputBox{
-width: calc(100% - 170px);  
+width: calc(100% - 110px);  
 border-radius: 4px;
 border: 1px solid #6F311C;
 background-color: transparent;
@@ -1677,7 +1738,7 @@ height: 100%;
 }
 
 .inputCatcha .btn-captcha{
-width: 157px;
+width: 100px;
 height: 40px;
 flex-shrink: 0;
 border-radius: 4px;
@@ -1751,6 +1812,36 @@ margin: auto;
 
 /* login Form  */
 
+.imageGallery .card{
+  margin-bottom: 15px;
+}
+.imageGallery .card .card-body p{
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--red);
+
+}
+.videoGallery img{
+  border-radius: 8px;
+}
+.imageGallery figure{
+  position: relative;
+}
+.imageGallery figcaption{ 
+  background: #fff;
+  min-height: 100px;
+  border-radius: 8px;  
+  padding: 0 25px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--red);
+  text-align: center;
+}
 @media (min-width: 768px) {
   .button-37 {
     padding: 10px 30px;
@@ -1837,6 +1928,16 @@ margin: auto;
       text-transform: capitalize;
       margin-bottom: 15px;
    }
+   .objectiveSection {   
+        padding: 25px 15px 25px;
+    }
+
+    .RoportLogin{
+      padding: 35px 25px;
+    }
+    .RoportLogin .title{
+      font-size: 130%;
+    }
 
 }
 
@@ -1851,7 +1952,8 @@ margin: auto;
     width: auto;
     height: 100%;
   }
-  .mission{
+
+  .mission ,.vision{
     flex-direction: column;
   }
   .mainHeading {
@@ -2110,7 +2212,9 @@ margin: auto;
 }
 
 @media(max-width:768px){
-  
+  .navbar{
+    z-index: 9;
+  }
   .navbar-collapse {
       position:fixed;
       left: 0%;
@@ -2146,10 +2250,38 @@ margin: auto;
 }
 .span-red{
   color:var(--red);
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 600; 
+}
+.nav-link{
+  padding: 10px 15px;
+}
+li.nav-item{
+  border-bottom:var(--red) solid 1px;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  background: #022759;
+  color: #fff;
+  padding: 0;
+  border-radius: 0;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {  
+  background: #ad121a;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--navColor);
+}
+a.dropdown-item{
+  color: #fff;
+  font-size: 90%;
+  padding: .65rem 1.5rem; 
+}
+
+.dropdown-menu li:not(:last-child) { 
+  border-bottom: solid #615f5f 0.25px;
+}
 /* .customTable thead tr:nth-child(1) th:nth-child(1){
   background-color: #624b98!important;
   color:#ffffff;
