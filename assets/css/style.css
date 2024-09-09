@@ -1238,14 +1238,15 @@ p.indent{
 
 .pageSubTitle{
   display: block;
-    color: #223645;     
-    font-size: 1.4rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 75% */
-    text-transform: capitalize;
-    padding: 15px 0 20px;
-    position: relative;
+  color: #223645;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: capitalize;
+  padding: 15px 0 0px;
+  position: relative;
+  margin-bottom: 15px;
 }
 .pageSubTitle::after{
     position: absolute;
@@ -1253,7 +1254,7 @@ p.indent{
     width: 50px;
     height: 3px;
     background: var(--red);
-    top: 75%;
+    top: 100%;
     left: 0;
 }
 
@@ -1547,7 +1548,8 @@ table tr td {
   list-style-type:none;
   margin:0;
   padding:10px 5px 0 5px;
-  position:relative
+  position:relative;
+  left:20px;
 }
 .tree li::before, 
 .tree li::after {
@@ -1901,7 +1903,7 @@ margin: auto;
     }
     .pageTitle {    
       font-size: 1.35rem;     
-      padding: 10px 0 20px;     
+      padding: 20px 0 30px;    
     }
     .serviceBox {     
       padding: 20px 15px;    
