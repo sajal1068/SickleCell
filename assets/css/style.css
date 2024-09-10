@@ -487,7 +487,7 @@ ul.footerNavigation a:hover{
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 1.5;
   text-transform: capitalize;
   margin-bottom: 0;
 }
@@ -910,6 +910,7 @@ ul.appDownloadList li::after {
 .vision p{
   padding: 0 15px;
   order: 1; 
+  line-height: 1.5;
 }
 .vision::after{
   position: absolute;
@@ -1840,7 +1841,7 @@ margin: auto;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.35;
   color: var(--red);
   text-align: center;
 }
@@ -1939,6 +1940,11 @@ margin: auto;
     }
     .RoportLogin .title{
       font-size: 130%;
+    }
+    .copyright p {    
+      font-size: 12px; 
+      line-height: 1.5;    
+      margin-bottom: 0;
     }
 
 }
@@ -2257,9 +2263,9 @@ margin: auto;
 .nav-link{
   padding: 10px 15px;
 }
-li.nav-item{
+/* li.nav-item{
   border-bottom:var(--red) solid 1px;
-}
+} */
 
 .dropdown:hover .dropdown-menu {
   display: block;
