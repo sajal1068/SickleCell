@@ -1880,7 +1880,7 @@ margin: auto;
     }
 
     .headerLogo li img{
-      max-height: 50px;
+      max-height: 46px;
     }
     ul.footerLogo li:nth-child(2) {
       margin: 0 10px;
@@ -2356,4 +2356,15 @@ a.dropdown-item{
  
 }
 
-
+.customCard span{
+  padding: 4px 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: rgb(255 178 178 / 20%);
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--redDark);
+}
