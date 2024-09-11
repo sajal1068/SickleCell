@@ -1845,6 +1845,26 @@ margin: auto;
   color: var(--red);
   text-align: center;
 }
+.btn-donwload svg{
+  max-height: 35px;
+  margin-bottom: 3px;
+}
+.btn-donwload{ 
+  width: auto;
+  outline: none;  
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;  
+  border:none;
+  justify-content: center;
+  padding: 1px;
+  background-color: transparent;
+}
+.btn-donwload span{
+  width: 100%;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
 @media (min-width: 768px) {
   .button-37 {
     padding: 10px 30px;
@@ -2325,13 +2345,15 @@ a.dropdown-item{
 
 
 .customTable thead tr:nth-child(1) th{
-  background-color: #ad121a!important;
-  color:#ffffff;
-  width: 5%;
-  padding: 10px 15px;
-  text-align: center;
+  background-color: #f3ecea !important;
+  color: #c22828;
+  padding: 10px 15px; 
+  text-transform: capitalize;
+  font-weight: 600;
 }
 .customTable tbody tr td{
   background-color:#fff8f9!important; 
  
 }
+
+
