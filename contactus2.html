@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>National Sickle Cell Anaemia Elimination Mission</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="assets/css/style.css" rel="stylesheet" crossorigin="anonymous">   
+    <link href="assets/css/style.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/leaflet.css">
     <meta name="description" content="Sicklecell Anemia" />
     <meta name="keywords" content="Sicklecell Anemia"/>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <style>
+      .contact_info_sec{
+        z-index: 999;
+      }
+    </style>
   </head>
   <body>
 
@@ -31,7 +37,8 @@
     </header>
 
     <nav class="navbar navbar-expand-lg bg-black">
-        <div class="container">         
+        <div class="container">
+         
           <button class="navbar-toggler ms-auto ms-sm-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -114,10 +121,8 @@
               <div class="col-12">
                 <div class="contact_inner">
                        
-                    <div class="contact_form_inner">
-                        <div style="width: 100%">                                    
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.627372345314!2d77.21022768749815!3d28.610953522357413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce390eee379a9%3A0x7945a4752f00fa08!2sMinistry%20of%20Health%20and%20Family%20Welfare!5e0!3m2!1sen!2sin!4v1691657381511!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                    <div class="contact_form_inner">                                                         
+                          <div id="map" style="height: 450px; width:100%"></div>                        
                     </div>
               
                     <div class="contact_info_sec">   
@@ -160,7 +165,13 @@
                     </div>
                     
                 </div>
-              </div>             
+              </div>
+
+              <div class="col-12">
+                
+
+  
+              </div>
             </div>
           </div>
         </section>
@@ -217,5 +228,57 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <script src="assets/js/leaflet.js"></script>
+
+<script>
+    // Latitude and Longitude for the map center
+    var lat = 28.61127; // Replace with your latitude
+    var lon = 77.21562;   // Replace with your longitude
+
+    // Initialize the map
+    var map = L.map('map').setView([lat, lon], 13);  // Set the zoom level to 13
+
+    // Add the OpenStreetMap tiles (hosted locally or via OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+       // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker at the specified lat/lon
+    var marker = L.marker([lat, lon]).addTo(map);
+    
+    // Optional: Bind a popup to the marker
+    marker.bindPopup("<b>Ministry of Health and Family Welfare</b><br>Nirman Bhawan,New Delhi - 110011").openPopup();
+</script>
+
+    <!-- <script>
+      // Replace with your desired latitude and longitude
+      var latitude = 28.61127;
+      var longitude = 77.21562;
+
+      // Create a Google Maps API script element
+      var script = document.createElement("script");
+      script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap";
+      document.body.appendChild(script);   
+
+
+      // Initialize the map when the script loads
+      function initMap() {
+          var mapOptions = {
+              center: {lat: latitude, lng: longitude},
+              zoom: 15
+          };
+
+          var map = new google.maps.Map(document.getElementById("map"), mapOptions);   
+
+
+          // Add a marker to the map
+          var marker = new google.maps.Marker({
+              position:   
+{lat: latitude, lng: longitude},
+              map: map
+          });
+      }
+  </script> -->
   </body>
 </html>

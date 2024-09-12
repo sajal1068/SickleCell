@@ -645,7 +645,7 @@ p.para {
   font-weight: 400;
   line-height: 1.5;
   text-transform: capitalize;
-  margin: 40px 0 60px;
+  margin: 40px 0 45px;
 }
 
 
@@ -1965,6 +1965,9 @@ margin: auto;
       font-size: 12px; 
       line-height: 1.5;    
       margin-bottom: 0;
+    }
+    ul.appDownloadList {
+        margin-bottom: 0px;
     }
 
 }
