@@ -2240,6 +2240,8 @@ margin: auto;
 }
 
 @media(max-width:768px){
+
+
   .navbar{
     z-index: 9;
   }
@@ -2251,12 +2253,30 @@ margin: auto;
       top:0%;
       height:100%;
       background: rgba(0,0,0,0.5);
+      z-index: 0;
   } 
+
+  .navbar-collapse::after{
+    content: '';
+    position: absolute;
+    width: 270px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#000F22;
+  }
   .navbar-nav{
       width: 270px;
       background-color: #000F22;
-      height: 100%;
+      height:auto;
+      position: relative;
+      z-index: 9;
   }
+  .collapse .d-flex{
+    position: relative;
+    z-index: 9;
+  }
+
   .navbar-collapse.collapsing {
       height: auto;
       -webkit-transition: left 0.3s ease;
@@ -2351,20 +2371,50 @@ a.dropdown-item{
   text-transform: capitalize;
   font-weight: 600;
 }
+
 .customTable tbody tr td{
   background-color:#fff8f9!important; 
  
 }
 
 .customCard span{
-  padding: 4px 15px;
+  /* padding: 4px 15px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: rgb(255 178 178 / 20%);
+  border-bottom-right-radius: 15px; */
+  /* background-color: rgb(255 178 178 / 20%); */
   display: inline-block;
-  font-size: 0.95rem;
+  font-size: 0.99rem;
+  font-weight: 400;
+  color: #555555;
+}
+.customCard thead tr th:nth-child(1){
+  background-color:#fff8f9!important; 
+  width: 60px;
+}
+.customCard tbody tr td:nth-child(1){
+  background-color:#fff8f9!important; 
   font-weight: 500;
   color: var(--redDark);
+}
+.customCard thead tr th:nth-child(2){
+  background-color:#ffece6 !important; 
+  
+}
+.customCard tbody tr td:nth-child(2){
+  background-color:#ffece6 !important; 
+  font-weight: 500;
+  color: var(--redDark);
+}
+
+.customCard thead tr th:nth-child(3){
+  background-color:#f5f7ff !important; 
+  text-align: center;
+  
+}
+.customCard tbody tr td:nth-child(3){
+  background-color:#f5f7ff !important;   
+  color: var(--redDark);
+  text-align: center;
 }
