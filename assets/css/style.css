@@ -2460,16 +2460,10 @@ margin: auto;
  
 }
 
-.customCard span{
-  /* padding: 4px 15px;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; */
-  /* background-color: rgb(255 178 178 / 20%); */
+.customCard span{  
   display: inline-block;
-  font-size: 0.99rem;
-  font-weight: 400;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: #555555;
 }
 .customCard thead tr th:nth-child(1){
@@ -2500,4 +2494,7 @@ margin: auto;
   background-color:#f5f7ff !important;   
   color: var(--redDark);
   text-align: center;
+}
+.customCard td{
+  font-size: 0.85rem;
 }
